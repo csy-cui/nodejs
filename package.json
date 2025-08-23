@@ -1,0 +1,23 @@
+{
+  "name": "csynode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npn run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csy-cui/nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csy-cui/nodejs/issues"
+  },
+  "homepage": "https://github.com/csy-cui/nodejs#readme",
+  "dependencies": {
+    "jsdom": "^26.1.0",
+    "node-fetch": "^3.3.2"
+  }
+}
