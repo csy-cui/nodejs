@@ -54,7 +54,6 @@ try {
 // });
 
 
-console.log();
 
 execFile(path.resolve(process.cwd(), "./test.cmd"), (error, stdout, stderr) => {
     if (error) {
@@ -65,3 +64,7 @@ execFile(path.resolve(process.cwd(), "./test.cmd"), (error, stdout, stderr) => {
 }
 
 );
+
+// fork 是 spawn 的特殊形式，专门用于创建 Node.js 子进程，运行一个模块文件。它与 spawn 的区别在于 fork 会自动设置 IPC 通道，使父子进程能够通过 send() 和 on('message') 方法进行通信。
+// fork 只能运行 Node.js 模块文件，不能直接执行 shell 命令。它适用于需要在父子进程之间进行复杂通信的场景。
+const child = fork(path.resolve(process.cwd(), "./test.js"));
